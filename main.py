@@ -45,28 +45,37 @@ def intro():#"Cinématique" d'intro du jeu.
     pygame.display.update()
     time.sleep(0.5)
     fenetre.blit(dialog_font.render("Salut à toi l'ami bienvenue dans le monde des pokémons! Tu dois être nouveaux ici, non?", True, [0,0,0]),(150,590))
+    pygame.display.update()
+    time.sleep(0.5)
     fenetre.blit(dialog_font.render("Nous sommes des Pokémons et nous vivons en harmonie avec les humains, qui nous aident", True, [0,0,0]),(150,615))
-    fenetre.blit(dialog_font.render("dansnous taches et travaux! Certains pokémons dressent des humains et les font combattre ", True, [0,0,0]),(150,640))
+    pygame.display.update()
+    time.sleep(0.5)
+    fenetre.blit(dialog_font.render("dans nos taches et travaux! Certains pokémons dressent des humains et les font combattre ", True, [0,0,0]),(150,640))
+    pygame.display.update()
+    time.sleep(0.5)
     fenetre.blit(dialog_font.render("entre eux. Ces humains sont appelés les Héros, mais vaut mieux que tu essaie toi même...", True, [0,0,0]),(150,665))
     pygame.display.update()
     clic_to_continue()
     fenetre.blit(dialbox,(130,570))
     fenetre.blit(orbe,(880,310))
-    fenetre.blit(menu_button_font.render("Touche l'Orbe!", True, [255,215,0]),(900,101))
+    fenetre.blit(menu_button_font.render("Touche l'Orbe!", True, [255,215,0]),(630,335))
     pygame.display.update()
     clickorb=False
     while(clickorb==False):
-        print("dedan")
         for event in pygame.event.get():
             if pygame.mouse.get_pressed()[0] and 880 <= pygame.mouse.get_pos()[0] <= 980 and 310 <= pygame.mouse.get_pos()[1] <= 410:
                 clickorb=True
         pygame.display.update()
-    time.sleep(0.5)
     pygame.display.flip()
     fenetre.blit(BG_intro,(0,0))
     fenetre.blit(runes,(290,110))
+    pygame.display.update()
+    time.sleep(1.5)
+    pygame.display.flip()
+    fenetre.blit(BG_intro,(0,0))
+    fenetre.blit(marthintro,(315,60))
+    pygame.display.update()
     time.sleep(0.5)
-    
     clic_to_continue()
 
 
@@ -105,8 +114,10 @@ mismagius = pygame.image.load("Resources/Sprites/mismagius.png")
 mismagius = pygame.transform.scale(mismagius,(500,500))
 orbe = pygame.image.load("Resources/Sprites/orb.png")
 orbe = pygame.transform.scale(orbe,(100,100))
-runes = pygame.image.load("Resources/Sprites/orb.png")
+runes = pygame.image.load("Resources/Sprites/magic.png")
 runes = pygame.transform.scale(runes,(500,500))
+marthintro = pygame.image.load("Resources/Sprites/marth.png")
+marthintro = pygame.transform.scale(marthintro,(450,600))
 
 menu()#Lancement du menu du jeu.
 quit()#Ferme la page si jamais sortie de toute les boucles et sous-programmes.
