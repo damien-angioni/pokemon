@@ -125,3 +125,28 @@ def intro():#"Cinématique" d'intro du jeu.
     fenetre.blit(dialog_font.render("L'un de ces trois devrait faire l'affaire, fais donc ton choix, dresseur, et tu pars à l'aventure!", True, [0,0,0]),(150,665))
     pygame.display.update()
     clic_to_continue()
+    pygame.display.flip()
+    fenetre.blit(BG_intro,(0,0))
+    fenetre.blit(menu_button_font.render("Touche l'Orbe de ton futur meilleur ami!", True, [255,215,0]),(220,150))
+    fenetre.blit(redorbe,(140,310))
+    fenetre.blit(sword_ico,(140,310))
+    fenetre.blit(blueorbe,(500,310))
+    fenetre.blit(lance_ico,(500,310))
+    fenetre.blit(greenorbe,(860,310))
+    fenetre.blit(axe_ico,(860,310))
+    fenetre.blit(alphonse_sp,(120,420))
+    fenetre.blit(sharena_sp,(480,420))
+    fenetre.blit(anna_sp,(840,420))
+    pygame.display.update()
+    time.sleep(1)
+    clickorb=False
+    while(clickorb==False):
+        for event in pygame.event.get():
+            if pygame.mouse.get_pressed()[0] and 140 <= pygame.mouse.get_pos()[0] <= 240 and 310 <= pygame.mouse.get_pos()[1] <= 410:
+                quit()
+            if pygame.mouse.get_pressed()[0] and 500 <= pygame.mouse.get_pos()[0] <= 600 and 310 <= pygame.mouse.get_pos()[1] <= 410:
+                quit()
+            if pygame.mouse.get_pressed()[0] and 860 <= pygame.mouse.get_pos()[0] <= 960 and 310 <= pygame.mouse.get_pos()[1] <= 410:
+                quit()
+        pygame.display.update()
+    
