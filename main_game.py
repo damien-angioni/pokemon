@@ -134,7 +134,7 @@ def intro():#"Cinématique" d'intro du jeu.
     fenetre.blit(lance_ico,(500,310))
     fenetre.blit(greenorbe,(860,310))
     fenetre.blit(axe_ico,(860,310))
-    fenetre.blit(alphonse_sp,(120,420))
+    fenetre.blit(alfonse_sp,(120,420))
     fenetre.blit(sharena_sp,(480,420))
     fenetre.blit(anna_sp,(840,420))
     pygame.display.update()
@@ -143,10 +143,31 @@ def intro():#"Cinématique" d'intro du jeu.
     while(clickorb==False):
         for event in pygame.event.get():
             if pygame.mouse.get_pressed()[0] and 140 <= pygame.mouse.get_pos()[0] <= 240 and 310 <= pygame.mouse.get_pos()[1] <= 410:
-                quit()
+                fenetre.blit(BG_intro,(0,0))
+                fenetre.blit(alfonse_splash,(275,60))
+                pygame.display.update()
+                time.sleep(3)
+                game_loop()
             if pygame.mouse.get_pressed()[0] and 500 <= pygame.mouse.get_pos()[0] <= 600 and 310 <= pygame.mouse.get_pos()[1] <= 410:
-                quit()
+                fenetre.blit(BG_intro,(0,0))
+                fenetre.blit(sharena_splash,(275,60))
+                pygame.display.update()
+                time.sleep(3)
+                game_loop()
             if pygame.mouse.get_pressed()[0] and 860 <= pygame.mouse.get_pos()[0] <= 960 and 310 <= pygame.mouse.get_pos()[1] <= 410:
-                quit()
+                fenetre.blit(BG_intro,(0,0))
+                fenetre.blit(anna_splash,(275,60))
+                pygame.display.update()
+                time.sleep(3)
+                game_loop()
         pygame.display.update()
-    
+def game_loop():#Boucle principale du jeu.
+    game_over=False
+    while(game_over==False):
+        pygame.mixer.music.stop()
+        pygame.mixer.music.load(ost_calm)
+        pygame.mixer.music.play(loops = -1)
+        fenetre.blit(BG_castle,(0,0))
+        pygame.display.update()
+        clic_to_continue()
+    quit()

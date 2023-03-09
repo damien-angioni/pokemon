@@ -30,6 +30,8 @@ button01 = pygame.image.load("Resources/Frame_image/button.png")
 button01 = pygame.transform.scale(button01,(150,50))
 dialbox = pygame.image.load("Resources/Frame_image/dialbox.png")
 dialbox = pygame.transform.scale(dialbox,(820,150))
+BG_castle = pygame.image.load("Resources/Frame_image/castle.png")
+BG_castle = pygame.transform.scale(BG_castle,(1080,720))
 
 #Déinition des sprites.
 mismagius = pygame.image.load("Resources/Sprites/mismagius.png")
@@ -46,6 +48,13 @@ runes = pygame.image.load("Resources/Sprites/magic.png")
 runes = pygame.transform.scale(runes,(500,500))
 marthintro = pygame.image.load("Resources/Sprites/marth.png")
 marthintro = pygame.transform.scale(marthintro,(450,600))
+alfonse_splash = pygame.image.load("Resources/Sprites/alfonse.png")
+alfonse_splash = pygame.transform.scale(alfonse_splash,(530,600))
+sharena_splash = pygame.image.load("Resources/Sprites/sharena.png")
+sharena_splash = pygame.transform.scale(sharena_splash,(530,600))
+anna_splash = pygame.image.load("Resources/Sprites/anna.png")
+anna_splash = pygame.transform.scale(anna_splash,(530,600))
+
 
 #définition des sprites des types
 astra_ico = pygame.image.load("Resources/Types/astra.png")
@@ -80,8 +89,8 @@ wind_ico = pygame.image.load("Resources/Types/wind.png")
 wind_ico = pygame.transform.scale(wind_ico,(35,35))
 
 #Définition des sprites personnage.
-alphonse_sp = pygame.image.load("Resources/Sprites/Character/alphonse.png")
-alphonse_sp = pygame.transform.scale(alphonse_sp,(150,150))
+alfonse_sp = pygame.image.load("Resources/Sprites/Character/alphonse.png")
+alfonse_sp = pygame.transform.scale(alfonse_sp,(150,150))
 sharena_sp = pygame.image.load("Resources/Sprites/Character/sharena.png")
 sharena_sp = pygame.transform.scale(sharena_sp,(150,150))
 anna_sp = pygame.image.load("Resources/Sprites/Character/anna.png")
