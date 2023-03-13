@@ -99,7 +99,7 @@ anna_sp = pygame.image.load("Resources/Sprites/Character/anna.png")
 anna_sp = pygame.transform.scale(anna_sp,(150,150))
 
 #Définition des sprites personnage.
-alfonse_ch = pygame.image.load("Resources/Sprites/Character/chibi/alphonse.png")
+alfonse_ch = pygame.image.load("Resources/Sprites/Character/chibi/alfonse.png")
 alfonse_ch = pygame.transform.scale(alfonse_ch,(150,150))
 sharena_ch = pygame.image.load("Resources/Sprites/Character/chibi/sharena.png")
 sharena_ch = pygame.transform.scale(sharena_ch,(150,150))
@@ -109,6 +109,6 @@ anna_ch = pygame.transform.scale(anna_ch,(150,150))
 #Définition des attaques.
 
 #Définition des unités.
-alfonse=Pokemon(1,"Alfonse,","Prince d'Askr","Epée",143,35,32,22)
-sharena=Pokemon(2,"Sharena","Princesse d'askr","Lance",143,32,29,22)
-anna=Pokemon(3,"Anna","Commandant","Hache",141,29,22,28)
+#alfonse=Pokemon(1,"Alfonse,","Prince d'Askr","Epée",143,35,32,22)
+#sharena=Pokemon(2,"Sharena","Princesse d'askr","Lance",143,32,29,22)
+#anna=Pokemon(3,"Anna","Commandant","Hache",141,29,22,28)
