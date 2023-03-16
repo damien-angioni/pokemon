@@ -175,7 +175,7 @@ def game_loop():#Boucle principale du jeu.
         choix=True
         while(choix==True):
             for event in pygame.event.get():
-                if pygame.mouse.get_pressed()[0] and 715 <= pygame.mouse.get_pos()[0] <= 1080 and 185 <= pygame.mouse.get_pos()[1] <= 535:
+                if pygame.mouse.get_pressed()[0] and 365 <= pygame.mouse.get_pos()[0] <= 715 and 185 <= pygame.mouse.get_pos()[1] <= 535:
                     choix=False
                     versus_battle()
                 if pygame.mouse.get_pressed()[0] and 930 <= pygame.mouse.get_pos()[0] <= 1080 and 670 <= pygame.mouse.get_pos()[1] <= 750:

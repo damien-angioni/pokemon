@@ -1,5 +1,5 @@
 class Pokemon(): #Définit ce qu'est un pokémon
-    def __init__(self,nb,nom,desc,type,basepv,atk,defn,resn,atk1,atk2,atk3,atk4):
+    def __init__(self,nb,nom,desc,type,basepv,atk,defn,resn,atk1,atk2,atk3,atk4,portrait,sprite,sprite_type):
         self.__id=nb
         self.__nom=nom
         self.__desc=desc
@@ -9,6 +9,9 @@ class Pokemon(): #Définit ce qu'est un pokémon
         self.__defn=defn
         self.__resn=resn
         self.__attaques=[atk1,atk2,atk3,atk4]
+        self.__portrait=portrait
+        self.__sprite=sprite
+        self.__sprite_type=sprite_type
     def retourneid(self):
         return(self.__id)
     def retournenom(self):
