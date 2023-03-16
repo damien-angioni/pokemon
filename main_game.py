@@ -163,11 +163,35 @@ def intro():#"Cinématique" d'intro du jeu.
         pygame.display.update()
 def game_loop():#Boucle principale du jeu.
     game_over=False
-    while(game_over==False):
+    while(game_over==False):#365 / 185
         pygame.mixer.music.stop()
         pygame.mixer.music.load(ost_calm)
         pygame.mixer.music.play(loops = -1)
         fenetre.blit(BG_castle,(0,0))
-        pygame.display.update()
-        clic_to_continue()
+        fenetre.blit(button01,(930,670))
+        fenetre.blit(battle_button,(365,185))
+        fenetre.blit(book_button,(0,0))
+        fenetre.blit(menu_button_font.render("Quitter", True, [255,215,0]),(947,671))
+        choix=True
+        while(choix==True):
+            for event in pygame.event.get():
+                if pygame.mouse.get_pressed()[0] and 715 <= pygame.mouse.get_pos()[0] <= 1080 and 185 <= pygame.mouse.get_pos()[1] <= 535:
+                    choix=False
+                    versus_battle()
+                if pygame.mouse.get_pressed()[0] and 930 <= pygame.mouse.get_pos()[0] <= 1080 and 670 <= pygame.mouse.get_pos()[1] <= 750:
+                    choix=False
+                    game_over=True
+            pygame.display.update()
     quit()
+def versus_battle():
+    pygame.mixer.music.stop()
+    pygame.mixer.music.load(ost_battle)
+    pygame.mixer.music.play(loops = -1)
+    print("wip")
+    combat=True
+    while(combat==True):
+        fenetre.blit(BG_arena,(0,0))
+        for event in pygame.event.get():
+            if pygame.mouse.get_pressed()[0] and 715 <= pygame.mouse.get_pos()[0] <= 1080 and 185 <= pygame.mouse.get_pos()[1] <= 535:
+                print("clic")
+        pygame.display.update()

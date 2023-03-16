@@ -34,6 +34,12 @@ dialbox = pygame.image.load("Resources/Frame_image/dialbox.png")
 dialbox = pygame.transform.scale(dialbox,(820,150))
 BG_castle = pygame.image.load("Resources/Frame_image/castle.png")
 BG_castle = pygame.transform.scale(BG_castle,(1080,720))
+battle_button = pygame.image.load("Resources/Frame_image/battle.png")
+battle_button = pygame.transform.scale(battle_button,(350,350))
+book_button = pygame.image.load("Resources/Frame_image/hero_book.png")
+book_button = pygame.transform.scale(book_button,(50,50))
+BG_arena = pygame.image.load("Resources/Frame_image/arena.png")
+BG_arena = pygame.transform.scale(BG_arena,(1080,720))
 
 #Déinition des sprites.
 mismagius = pygame.image.load("Resources/Sprites/mismagius.png")
